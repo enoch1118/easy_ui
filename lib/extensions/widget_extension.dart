@@ -109,8 +109,9 @@ extension WidgetExtension on Widget {
       );
 
   // not inkwell
-  Widget tap(VoidCallback onTap) => Tap(
+  Widget tap(VoidCallback onTap, {bool ignoreMinsize = false}) => Tap(
         onTap: onTap,
+        ignoreMinsize: ignoreMinsize,
         child: this,
       );
 
