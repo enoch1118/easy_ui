@@ -68,6 +68,16 @@ extension WidgetExtension on Widget {
         child: this,
       );
 
+  Widget get shimmer => Stack(
+        children: [
+          Positioned.fill(
+              child: Container(
+            color: Colors.black,
+          )),
+          this,
+        ],
+      );
+
   // layout
   Widget wpv(double value) => Padding(
         padding: EdgeInsets.all(value),
